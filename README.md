@@ -12,3 +12,11 @@ Panel - content panel of eath tab
 - [ ] When you press Enter or Space, actual content will transition to the content related to selected Tab Heading
 - [ ] When you have focus on Button 1, then you press tabulation, focus go to the current active tab heading, then if you press tabulation, focus will go to button 3
 - [ ] Add switch page animation
+
+## Resources
+
+[Accessible Tabs in Angular - This Dot Labs](https://www.thisdot.co/blog/accessible-tabs-in-angular)
+
+[ARIA: tab role - MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+
+[Feature modules - Angular](https://angular.io/guide/feature-modules)
