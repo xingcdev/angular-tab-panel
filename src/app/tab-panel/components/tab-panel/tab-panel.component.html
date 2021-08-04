@@ -1,4 +1,4 @@
-<app-tab-list>
+<app-tab-list (keyup)="onKeys($event)">
   <app-tab-button
     [panelId]="0"
     [isSelected]="currentPanelId === 0"
