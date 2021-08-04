@@ -1,7 +1,38 @@
 <app-tab-list>
-  <app-tab-button [panelId]="1" [isSelected]="true">Tab 1</app-tab-button>
-  <app-tab-button [panelId]="2" [isSelected]="false">Tab 2</app-tab-button>
-  <app-tab-button [panelId]="3" [isSelected]="false">Tab 3</app-tab-button>
-  <app-tab-button [panelId]="4" [isSelected]="false">Tab 4</app-tab-button>
+  <app-tab-button
+    [panelId]="0"
+    [isSelected]="currentPanelId === 0"
+    (click)="activatePanel(0)"
+    >Tab 1</app-tab-button
+  >
+  <app-tab-button
+    [panelId]="1"
+    [isSelected]="currentPanelId === 1"
+    (click)="activatePanel(1)"
+    >Tab 2</app-tab-button
+  >
+  <app-tab-button
+    [panelId]="2"
+    [isSelected]="currentPanelId === 2"
+    (click)="activatePanel(2)"
+    >Tab 3</app-tab-button
+  >
+  <app-tab-button
+    [panelId]="3"
+    [isSelected]="currentPanelId === 3"
+    (click)="activatePanel(3)"
+    >Tab 4</app-tab-button
+  >
 </app-tab-list>
-<app-content-panel [panelId]="1">Content Tab 1</app-content-panel>
+<app-content-panel *ngIf="currentPanelId === 0" [id]="0"
+  >Content Tab 1</app-content-panel
+>
+<app-content-panel *ngIf="currentPanelId === 1" [id]="1"
+  >Content Tab 2</app-content-panel
+>
+<app-content-panel *ngIf="currentPanelId === 2" [id]="2"
+  >Content Tab 3</app-content-panel
+>
+<app-content-panel *ngIf="currentPanelId === 3" [id]="3"
+  >Content Tab 4</app-content-panel
+>
