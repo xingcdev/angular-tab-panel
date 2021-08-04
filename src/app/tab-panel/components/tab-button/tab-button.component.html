@@ -1,1 +1,7 @@
-<button role="tab" [attr.aria-controls]="panelId" [attr.aria-selected]='isSelected'><ng-content></ng-content></button>
+<button
+  role="tab"
+  [attr.aria-controls]="'panel-' + panelId"
+  [attr.aria-selected]="isSelected"
+>
+  <ng-content></ng-content>
+</button>
