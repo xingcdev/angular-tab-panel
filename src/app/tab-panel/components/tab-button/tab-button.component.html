@@ -2,6 +2,7 @@
   role="tab"
   [attr.aria-controls]="'panel-' + panelId"
   [attr.aria-selected]="isSelected"
+  [attr.tabindex]="isSelected ? null : -1"
 >
   <ng-content></ng-content>
 </button>

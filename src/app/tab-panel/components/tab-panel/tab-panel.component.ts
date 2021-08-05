@@ -43,11 +43,10 @@ export class TabPanelComponent implements AfterViewInit {
   }
 
   onKeys(event: any) {
-    console.log(event.key);
-    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft')
       this.focusTab(this.currentFocusedTab - 1);
-    } else {
+
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight')
       this.focusTab(this.currentFocusedTab + 1);
-    }
   }
 }
