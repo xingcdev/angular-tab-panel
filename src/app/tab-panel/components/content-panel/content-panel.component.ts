@@ -6,10 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./content-panel.component.scss'],
 })
 export class ContentPanelComponent implements OnInit {
-  @Input() id: number;
+  @Input() id: string;
 
   constructor() {
-    this.id = 0;
+    this.id = '';
   }
 
   ngOnInit(): void {}

@@ -14,7 +14,7 @@ import { TabButtonComponent } from '../tab-button/tab-button.component';
   styleUrls: ['./tab-panel.component.scss'],
 })
 export class TabPanelComponent implements AfterViewInit {
-  currentPanelId: number = 0;
+  currentPanelId: string = 'panel0';
   currentFocusedTab: number = 0;
 
   @ViewChildren(TabButtonComponent, { read: ElementRef })
@@ -29,7 +29,7 @@ export class TabPanelComponent implements AfterViewInit {
 
   activatePanel(id: number) {
     if (id < 0 || id > this.tabButtons.length - 1) return;
-    this.currentPanelId = id;
+    this.currentPanelId = 'panel' + id;
 
     // Get the current focused tab when the user click on it.
     this.currentFocusedTab = id;

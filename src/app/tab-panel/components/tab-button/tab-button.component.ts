@@ -6,11 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./tab-button.component.scss'],
 })
 export class TabButtonComponent implements OnInit {
-  @Input() panelId: number;
+  @Input() panelId: string;
   @Input() isSelected: boolean;
 
   constructor() {
-    this.panelId = 0;
+    this.panelId = '';
     this.isSelected = false;
   }
 
