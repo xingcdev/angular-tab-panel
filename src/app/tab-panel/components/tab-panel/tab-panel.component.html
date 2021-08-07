@@ -1,39 +1,67 @@
-<!-- When a key is pressed -->
-<app-tab-list (keydown)="onKeys($event)">
-  <app-tab-button
-    [panelId]="'panel0'"
-    [isSelected]="currentPanelId === 'panel0'"
-    (click)="activatePanel(0)"
-    >Tab 1</app-tab-button
-  >
-  <app-tab-button
-    [panelId]="'panel1'"
-    [isSelected]="currentPanelId === 'panel1'"
-    (click)="activatePanel(1)"
-    >Tab 2</app-tab-button
-  >
-  <app-tab-button
-    [panelId]="'panel2'"
-    [isSelected]="currentPanelId === 'panel2'"
-    (click)="activatePanel(2)"
-    >Tab 3</app-tab-button
-  >
-  <app-tab-button
-    [panelId]="'panel3'"
-    [isSelected]="currentPanelId === 'panel3'"
-    (click)="activatePanel(3)"
-    >Tab 4</app-tab-button
-  >
-</app-tab-list>
-<app-content-panel *ngIf="currentPanelId === 'panel0'" [id]="'panel0'"
-  >Content Tab 1</app-content-panel
+<!-- gt-sm === screen and (min-width: 960px) -->
+<div
+  class="tab-panel"
+  (keydown)="onKeys($event)"
+  fxLayout="column"
+  fxLayout.gt-sm="row"
 >
-<app-content-panel *ngIf="currentPanelId === 'panel1'" [id]="'panel1'"
-  >Content Tab 2</app-content-panel
->
-<app-content-panel *ngIf="currentPanelId === 'panel2'" [id]="'panel2'"
-  >Content Tab 3</app-content-panel
->
-<app-content-panel *ngIf="currentPanelId === 'panel3'" [id]="'panel3'"
-  >Content Tab 4</app-content-panel
->
+  <header>
+    <app-tab-list fxLayout="row" fxLayout.gt-sm="column">
+      <app-tab-button
+        [panelId]="'panel0'"
+        [isSelected]="currentPanelId === 'panel0'"
+        (click)="activatePanel(0)"
+        >Tab 1</app-tab-button
+      >
+      <app-tab-button
+        [panelId]="'panel1'"
+        [isSelected]="currentPanelId === 'panel1'"
+        (click)="activatePanel(1)"
+        >Tab 2</app-tab-button
+      >
+      <app-tab-button
+        [panelId]="'panel2'"
+        [isSelected]="currentPanelId === 'panel2'"
+        (click)="activatePanel(2)"
+        >Tab 3</app-tab-button
+      >
+      <app-tab-button
+        [panelId]="'panel3'"
+        [isSelected]="currentPanelId === 'panel3'"
+        (click)="activatePanel(3)"
+        >Tab 4</app-tab-button
+      >
+    </app-tab-list>
+  </header>
+
+  <main class="content-panels">
+    <app-content-panel *ngIf="currentPanelId === 'panel0'" [id]="'panel0'">
+      Content Tab 1 <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+      possimus recusandae numquam id nemo nesciunt laboriosam totam, ratione
+      suscipit voluptas quia impedit, iure saepe pariatur voluptatibus ducimus
+      repellat veritatis ipsam?
+    </app-content-panel>
+    <app-content-panel *ngIf="currentPanelId === 'panel1'" [id]="'panel1'"
+      >Content Tab 2 <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+      possimus recusandae numquam id nemo nesciunt laboriosam totam, ratione
+      suscipit voluptas quia impedit, iure saepe pariatur voluptatibus ducimus
+      repellat veritatis ipsam?</app-content-panel
+    >
+    <app-content-panel *ngIf="currentPanelId === 'panel2'" [id]="'panel2'"
+      >Content Tab 3 <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+      possimus recusandae numquam id nemo nesciunt laboriosam totam, ratione
+      suscipit voluptas quia impedit, iure saepe pariatur voluptatibus ducimus
+      repellat veritatis ipsam?</app-content-panel
+    >
+    <app-content-panel *ngIf="currentPanelId === 'panel3'" [id]="'panel3'"
+      >Content Tab 4 <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+      possimus recusandae numquam id nemo nesciunt laboriosam totam, ratione
+      suscipit voluptas quia impedit, iure saepe pariatur voluptatibus ducimus
+      repellat veritatis ipsam?</app-content-panel
+    >
+  </main>
+</div>
