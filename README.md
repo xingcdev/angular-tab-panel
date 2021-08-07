@@ -2,6 +2,14 @@
 
 A tab panel built using [Angular 12](https://angular.io/).
 
+## Usage
+
+Clone the repository and start a local server :
+
+```shell
+ng serve --open
+```
+
 ## User stories
 
 - [x] Make the responsive navigation sidebar
